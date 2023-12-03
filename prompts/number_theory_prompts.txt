@@ -1,0 +1,75 @@
+Natural language version: "If $n$ is a positive integer such that $2n$ has 28 positive divisors and $3n$ has 30 positive divisors, then how many positive divisors does $6n$ have? The final answer is 35"
+Translate the natural language version to a Lean version:
+theorem
+  (n : ℕ)
+  (h₀ : 0 < n)
+  (h₁ : finset.card (nat.divisors (2 * n)) = 28)
+  (h₂ : finset.card (nat.divisors (3 * n)) = 30) :
+  finset.card (nat.divisors (6 * n)) = 35 :=
+
+Natural language version: "Let $n$ be the number of integers $m$ in the range $1\le m\le 8$ such that $\text{gcd}(m,8)=1$. What is the remainder when $3^n$ is divided by $8$? The final answer is 1"
+Translate the natural language version to a Lean version:
+theorem
+  (n : ℕ)
+  (h₀ : n = finset.card (finset.filter (λ x, gcd x 8 = 1) (finset.Icc 1 7))) :
+  (3^n) % 8 = 1 :=
+
+Natural language version: "What is the remainder when $1 + 2 + 3 + 4 + \dots + 9 + 10$ is divided by 9? The final answer is 1"
+Translate the natural language version to a Lean version:
+theorem :
+  (∑ k in (finset.range 11), k) % 9 = 1 :=
+
+Natural language version: "Cards are numbered from 1 to 100. One card is removed and the values on the other 99 are added. The resulting sum is a multiple of 77. What number was on the card that was removed? The final answer is 45"
+Translate the natural language version to a Lean version:
+theorem
+  (x : ℕ)
+  (h₀ : 1 ≤ x ∧ x ≤ 100)
+  (h₁ : 77∣(∑ k in (finset.range 101), k - x)) :
+  x = 45 :=
+
+Natural language version: "Find $9^{-1} \pmod{100}$, as a residue modulo 100.  (Give an answer between 0 and 99, inclusive.) The final answer is 89"
+Translate the natural language version to a Lean version:
+theorem
+  (x: ℕ)
+  (h₀ : x < 100)
+  (h₁ : x*9 % 100 = 1) :
+  x = 89 :=
+
+Natural language version: "Suppose $m$ is a two-digit positive integer such that $6^{-1}\pmod m$ exists and $6^{-1}\equiv 6^2\pmod m$. What is $m$? The final answer is 43"
+Translate the natural language version to a Lean version:
+theorem
+  (m x : ℕ)
+  (h₀ : 10 ≤ m)
+  (h₁ : m ≤ 99)
+  (h₂ : (6 * x) % m = 1)
+  (h₃ : (x - 6^2) % m = 0) :
+  m = 43 :=
+
+Natural language version: "Find $24^{-1} \pmod{11^2}$. That is, find the residue $b$ for which $24b \equiv 1\pmod{11^2}$.
+
+Express your answer as an integer from $0$ to $11^2-1$, inclusive. The final answer is 116"
+Translate the natural language version to a Lean version:
+theorem
+  (b : zmod (11^2))
+  (h₀ : b = 24⁻¹) :
+  b = 116 :=
+
+Natural language version: "Given that $p\ge 7$ is a prime number, evaluate $$1^{-1} \cdot 2^{-1} + 2^{-1} \cdot 3^{-1} + 3^{-1} \cdot 4^{-1} + \cdots + (p-2)^{-1} \cdot (p-1)^{-1} \pmod{p}.$$ The final answer is 2"
+Translate the natural language version to a Lean version:
+theorem
+  (p : ℕ)
+  (h₀ : nat.prime p)
+  (h₁ : 7 ≤ p) :
+  ∑ k in finset.Icc 1 (p-2), ((k:zmod p)⁻¹ * ((k:zmod p) + 1)⁻¹) = 2 :=
+
+Natural language version: "What is the remainder when $2000+2001+2002+2003+2004+2005+2006$ is divided by $7$? The final answer is 0"
+Translate the natural language version to a Lean version:
+theorem :
+  (2000 + 2001 + 2002 + 2003 + 2004 + 2005 + 2006) % 7 = 0 :=
+
+Natural language version: "One morning each member of Angela's family drank an 8-ounce mixture of coffee with milk. The amounts of coffee and milk varied from cup to cup, but were never zero. Angela drank a quarter of the total amount of milk and a sixth of the total amount of coffee. How many people are in the family? The final answer is 5"
+Translate the natural language version to a Lean version:
+theorem
+  (x y n : ℕ+)
+  (h₀ : ↑x / (4:ℝ) + y / 6 = (x + y) / n) :
+  n = 5 :=
