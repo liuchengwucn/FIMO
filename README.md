@@ -93,7 +93,7 @@ end
 
 ## Structure
 
-When organizing our project structure, we followed [openai/miniF2F](https://github.com/openai/miniF2F), hopefully making it easier for researchers to utilize our work.  Naming conventions are consistent with the miniF2F dataset. Each problem is nominated as `fimo_{year}_{category}_p{problem_count}`, where `fimo` denotes the Formalized IMO-level problems.
+When organizing our project structure, we followed [openai/miniF2F](https://github.com/openai/miniF2F), hopefully making it easier for researchers to utilize our work. Each problem is nominated as `fimo_{year}_{category}_p{problem_count}`, where `fimo` denotes the Formalized IMO-level problems.
 
 * `lean/fimo.lean`: Formalized IMO shortlist problems in LEAN language.
 * `prompts/algebra_prompts.txt`: Prompts for algebra problems.
