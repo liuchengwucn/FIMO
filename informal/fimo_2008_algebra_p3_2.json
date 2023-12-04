@@ -1,0 +1,5 @@
+{
+    "problem_name": "fimo_2008_algebra_p3_2",
+    "informal_statement": "Let $S \\subseteq \\mathbb{R}$ be a set of real numbers. We say that a pair $(f, g)$ of functions from $S$ into $S$ is a Spanish Couple on $S$, if they satisfy the following conditions:\n\n(i) Both functions are strictly increasing, i.e. $f(x)<f(y)$ and $g(x)<g(y)$ for all $x, y \\in S$ with $x<y$\n\n(ii) The inequality $f(g(g(x)))<g(f(x))$ holds for all $x \\in S$.\n\nDecide whether there exists a Spanish Couple on the set $S=\\{a-1 / b: a, b \\in \\mathbb{N}\\}$.\n\nThe final answer is YES.",
+    "informal_proof": "We present a Spanish Couple on the set $S=\\{a-1 / b: a, b \\in \\mathbb{N}\\}$.\n\nLet\n\n$$\n\\begin{aligned}\n& f(a-1 / b)=a+1-1 / b, \\\\\n& g(a-1 / b)=a-1 /\\left(b+3^{a}\\right) .\n\\end{aligned}\n$$\n\nThese functions are clearly increasing. Condition (ii) holds, since\n\n$$\nf(g(g(a-1 / b)))=(a+1)-1 /\\left(b+2 \\cdot 3^{a}\\right)<(a+1)-1 /\\left(b+3^{a+1}\\right)=g(f(a-1 / b)) .\n$$"
+}

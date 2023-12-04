@@ -1,0 +1,5 @@
+{
+    "problem_name": "fimo_2011_number_theory_p5",
+    "informal_statement": "Let $f$ be a function from the set of integers to the set of positive integers. Suppose that for any two integers $m$ and $n$, the difference $f(m)-f(n)$ is divisible by $f(m-n)$. Prove that for all integers $m, n$ with $f(m) \\leq f(n)$ the number $f(n)$ is divisible by $f(m)$.",
+    "informal_proof": "Suppose that $x$ and $y$ are two integers with $f(x)<f(y)$. We will show that $f(x) \\mid f(y)$. By taking $m=x$ and $n=y$ we see that\n\n$$\nf(x-y)|| f(x)-f(y) \\mid=f(y)-f(x)>0,\n$$\n\nso $f(x-y) \\leq f(y)-f(x)<f(y)$. Hence the number $d=f(x)-f(x-y)$ satisfies\n\n$$\n-f(y)<-f(x-y)<d<f(x)<f(y) .\n$$\n\nTaking $m=x$ and $n=x-y$ we see that $f(y) \\mid d$, so we deduce $d=0$, or in other words $f(x)=f(x-y)$. Taking $m=x$ and $n=y$ we see that $f(x)=f(x-y) \\mid f(x)-f(y)$, which implies $f(x) \\mid f(y)$."
+}

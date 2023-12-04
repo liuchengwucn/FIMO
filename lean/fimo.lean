@@ -9,7 +9,7 @@ open_locale topological_space
 alias real.sqrt <- sqrt
 alias int.floor <- floor
 
-theorem imosl_2006_algebra_p1
+theorem fimo_2006_algebra_p1
   (a : ℕ → ℝ)
   (h₀ : ∀ i, a (i + 1) = ⌊a i⌋ * (a i - ⌊a i⌋)) :
   ∃ n : ℕ, ∀ i ≥ n, a i = a (i + 2) :=
@@ -17,7 +17,7 @@ begin
   sorry
 end
 
-theorem imosl_2006_algebra_p2
+theorem fimo_2006_algebra_p2
   (a : ℕ → ℝ)
   (h₀ : a 0 = -1)
   (h₁ : ∀ n ≥ 1, ∑ k in finset.range (n + 1), a (n - k) / (k + 1) = 0) :
@@ -26,7 +26,7 @@ begin
   sorry
 end
 
-theorem imosl_2006_algebra_p4
+theorem fimo_2006_algebra_p4
   (n : ℕ)
   (a : fin n → ℝ)
   (h₀ : ∀ i, 0 < a i) :
@@ -36,7 +36,7 @@ begin
   sorry
 end
 
-theorem imosl_2006_algebra_p5
+theorem fimo_2006_algebra_p5
   (a b c : ℝ)
   (h₀ : a > 0 ∧ b > 0 ∧ c > 0)
   (h₁ : a + b > c ∧ a + c > b ∧ b + c > a) :
@@ -47,7 +47,7 @@ begin
   sorry
 end
 
-theorem imosl_2006_number_theory_p2
+theorem fimo_2006_number_theory_p2
   (x y : ℝ)
   (h₀ : 0 < x ∧ x < 1)
   (h₁ : 0 < y ∧ y < 1)
@@ -58,19 +58,19 @@ begin
   sorry
 end
 
-theorem imosl_2006_number_theory_p5 :
+theorem fimo_2006_number_theory_p5 :
   ¬ (∃ (x y : ℤ), (x^7 - 1) / (x - 1) = y^5 - 1) :=
 begin
   sorry
 end
 
-theorem imosl_2006_number_theory_p7 (n : ℕ) (h₀ : 0 < n) :
+theorem fimo_2006_number_theory_p7 (n : ℕ) (h₀ : 0 < n) :
   ∃ m, (2^m + m) % n = 0 :=
 begin
   sorry
 end
 
-theorem imosl_2007_algebra_p2
+theorem fimo_2007_algebra_p2
   (f : ℕ → ℕ)
   (h₀ : ∀ m n, f (m + n) ≥ f m + f (f n) - 1) :
   ∃ k, 1 ≤ k ∧ k ≤ 2008 ∧ f 2007 = k :=
@@ -78,7 +78,7 @@ begin
   sorry
 end
 
-theorem imosl_2007_algebra_p3
+theorem fimo_2007_algebra_p3
   (n : ℕ)
   (x y : ℝ)
   (h₀ : 0 < n)
@@ -91,7 +91,7 @@ begin
   sorry
 end
 
-theorem imosl_2007_algebra_p4
+theorem fimo_2007_algebra_p4
   (f : ℝ → ℝ)
   (h₀ : ∀ x y, 0 < x ∧ 0 < y → f (x + f y) = f (x + y) + f y)
   (h₁ : ∀ x, 0 < x → 0 < f x) :
@@ -100,7 +100,7 @@ begin
   sorry
 end
 
-theorem imosl_2007_algebra_p6
+theorem fimo_2007_algebra_p6
   (a : ℕ → ℝ)
   (h₀ : ∀ i, 0 ≤ a i)
   (h₁ : ∑ i in finset.range 100, (a i)^2 = 1) :
@@ -109,7 +109,7 @@ begin
   sorry
 end
 
-theorem imosl_2007_number_theory_p1
+theorem fimo_2007_number_theory_p1
   (k n : ℕ)
   (h₀ : 0 < k ∧ 0 < n)
   (h₁ : (k^4 + n^2) % (7^k - 3^n) = 0) :
@@ -118,7 +118,7 @@ begin
   sorry
 end
 
-theorem imosl_2007_number_theory_p2
+theorem fimo_2007_number_theory_p2
   (b n : ℕ)
   (h₀ : 1 < n)
   (h₁ : ∀ k > 1, ∃ a_k : ℕ, (b - a_k^n) % k = 0) :
@@ -127,7 +127,7 @@ begin
   sorry
 end
 
-theorem imosl_2007_number_theory_p3 :
+theorem fimo_2007_number_theory_p3 :
   ∀ (X : finset ℕ),
     (finset.card X = 10000) ∧
     (∀ x ∈ X, x % 47 ≠ 0) →
@@ -139,7 +139,7 @@ begin
   sorry
 end
 
-theorem imosl_2007_number_theory_p4
+theorem fimo_2007_number_theory_p4
   (k : ℕ)
   (h₀ : 2 ≤ k) :
   (2^(3*k) ∣ (nat.choose (2^(k+1)) (2^k) - nat.choose (2^k) (2^(k-1)))) ∧
@@ -148,7 +148,7 @@ begin
   sorry
 end
 
-theorem imosl_2007_number_theory_p5
+theorem fimo_2007_number_theory_p5
   (f : ℕ+ → ℕ+)
   (h₀ : ∀ m n p, nat.prime p → (p ∣ f (m + n) ↔ p ∣ (f m + f n))) :
   ∀ n, f n = n :=
@@ -156,7 +156,7 @@ begin
   sorry
 end
 
-theorem imosl_2007_number_theory_p6
+theorem fimo_2007_number_theory_p6
   (k n : ℕ)
   (h₀ : 0 < k) :
   (∃ n, (8 * k * n - 1) ∣ ((4 * k^2 - 1)^2)) ↔ (2 ∣ k) :=
@@ -164,7 +164,7 @@ begin
   sorry
 end
 
-theorem imosl_2008_algebra_p1
+theorem fimo_2008_algebra_p1
   (f : ℝ → ℝ)
   (h₀ : ∀ x > 0, 0 < f x)
   (h₁ : ∀ p q r s : ℝ, p > 0 → q > 0 → r > 0 → s > 0 → p * q = r * s →
@@ -174,7 +174,7 @@ begin
   sorry
 end
 
-theorem imosl_2008_algebra_p2_1
+theorem fimo_2008_algebra_p2_1
   (x y z : ℝ)
   (h₀ : x ≠ 1 ∧ y ≠ 1 ∧ z ≠ 1)
   (h₁ : x * y * z = 1) :
@@ -183,7 +183,7 @@ begin
   sorry
 end
 
-theorem imosl_2008_algebra_p3_1 :
+theorem fimo_2008_algebra_p3_1 :
   ¬(∃ (f g : ℕ → ℕ),
     (∀ x y, x < y → f x < f y ∧ g x < g y) ∧
     (∀ x, f (g (g x)) < g (f x))) :=
@@ -191,7 +191,7 @@ begin
   sorry
 end
 
-theorem imosl_2008_algebra_p3_2 :
+theorem fimo_2008_algebra_p3_2 :
   ∃ (f g : {x : ℝ // ∃ a b : ℕ, x = a - 1 / b} → {x : ℝ // ∃ a b : ℕ, x = a - 1 / b}),
   (∀ x y : {x : ℝ // ∃ a b : ℕ, x = a - 1 / b}, x < y → f x < f y ∧ g x < g y) ∧
   (∀ x : {x : ℝ // ∃ a b : ℕ, x = a - 1 / b}, f (g (g x)) < g (f x)) :=
@@ -199,7 +199,7 @@ begin
   sorry
 end
 
-theorem imosl_2008_algebra_p4
+theorem fimo_2008_algebra_p4
   (f : ℤ → ℤ)
   (t : ℤ → ℤ)
   (h₀ : ∀ m, (t m = 1 ∨ t m = 2 ∨ t m = 3) ∧ ∃ n, m + t m = 3 * n)
@@ -212,7 +212,7 @@ begin
   sorry
 end
 
-theorem imosl_2008_algebra_p5
+theorem fimo_2008_algebra_p5
   (a b c d : ℝ)
   (h₀ : 0 < a ∧ 0 < b ∧ 0 < c ∧ 0 < d)
   (h₁ : a * b * c * d = 1)
@@ -222,7 +222,7 @@ begin
   sorry
 end
 
-theorem imosl_2008_algebra_p6
+theorem fimo_2008_algebra_p6
   (f : ℝ → ℕ)
   (h₀ : ∀ x y : ℝ, f (x + 1 / f y) = f (y + 1 / f x)) :
   ∃ n : ℕ, n > 0 ∧ ∀ x : ℝ, f x ≠ n :=
@@ -230,7 +230,7 @@ begin
   sorry
 end
 
-theorem imosl_2008_algebra_p7_1
+theorem fimo_2008_algebra_p7_1
   (a b c d : ℝ)
   (h₀ : 0 < a ∧ 0 < b ∧ 0 < c ∧ 0 < d) :
   (a - b) * (a - c) / (a + b + c) + (b - c) * (b - d) / (b + c + d) + (c - d) * (c - a) / (c + d + a) + (d - a) * (d - b) / (d + a + b) ≥ 0 :=
@@ -238,7 +238,7 @@ begin
   sorry
 end
 
-theorem imosl_2008_algebra_p7_2
+theorem fimo_2008_algebra_p7_2
   (a b c d : ℝ)
   (h₀ : 0 < a ∧ 0 < b ∧ 0 < c ∧ 0 < d)
   (h₁ : (a - b) * (a - c) / (a + b + c) + (b - c) * (b - d) / (b + c + d) + (c - d) * (c - a) / (c + d + a) + (d - a) * (d - b) / (d + a + b) = 0) :
@@ -247,7 +247,7 @@ begin
   sorry
 end
 
-theorem imosl_2008_number_theory_p1
+theorem fimo_2008_number_theory_p1
   (n : ℕ)
   (p : ℕ)
   (a b c : ℤ)
@@ -260,7 +260,7 @@ begin
   sorry
 end
 
-theorem imosl_2008_number_theory_p2
+theorem fimo_2008_number_theory_p2
   (n : ℕ)
   (a : finset ℕ)
   (h₀ : n ≥ 3)
@@ -270,7 +270,7 @@ begin
   sorry
 end
 
-theorem imosl_2008_number_theory_p3
+theorem fimo_2008_number_theory_p3
   (a : ℕ → ℕ)
   (h₀ : ∀ n, 0 < a n)
   (h₁ : ∀ n, gcd (a n) (a (n + 1)) > a (n - 1)) :
@@ -279,13 +279,13 @@ begin
   sorry
 end
 
-theorem imosl_2008_number_theory_p6 :
+theorem fimo_2008_number_theory_p6 :
   ∃ f : ℕ → ℕ, (∀ i j, i ≠ j → f i ≠ f j) ∧ (∀ n, 0 < f n) ∧ (∀ n, ∃ p, nat.prime p ∧ p > 2 * f n + nat.sqrt (2 * f n) ∧ p ∣ (f n)^2 + 1) :=
 begin
   sorry
 end
 
-theorem imosl_2009_algebra_p2
+theorem fimo_2009_algebra_p2
   (a b c : ℝ)
   (h₀ : 0 < a ∧ 0 < b ∧ 0 < c)
   (h₁ : 1 / a + 1 / b + 1 / c = a + b + c) :
@@ -294,7 +294,7 @@ begin
   sorry
 end
 
-theorem imosl_2009_algebra_p3
+theorem fimo_2009_algebra_p3
   (f : ℕ → ℕ)
   (h₀ : ∀ x y, ∃ (a b c : ℕ),
     a = x ∧
@@ -308,7 +308,7 @@ begin
   sorry
 end
 
-theorem imosl_2009_algebra_p4
+theorem fimo_2009_algebra_p4
   (a b c : ℝ)
   (h₀ : 0 < a ∧ 0 < b ∧ 0 < c)
   (h₁ : a * b + b * c + c * a ≤ 3 * a * b * c) :
@@ -318,14 +318,14 @@ begin
   sorry
 end
 
-theorem imosl_2009_algebra_p5
+theorem fimo_2009_algebra_p5
   (f : ℝ → ℝ) :
   ∃ x y, f (x - f y) > y * f x + x :=
 begin
   sorry
 end
 
-theorem imosl_2009_algebra_p6
+theorem fimo_2009_algebra_p6
   (s : ℕ → ℕ)
   (h₀ : ∀ n, s n < s (n + 1))
   (h₁ : ∀ n, s (s n) - s (s (n - 1)) = s (s 1) - s (s 0))
@@ -335,7 +335,7 @@ begin
   sorry
 end
 
-theorem imosl_2009_algebra_p7
+theorem fimo_2009_algebra_p7
   (f : ℝ → ℝ)
   (h₀ : ∀ x y, f (x * f (x + y)) = f (y * f x) + x^2) :
   (∀ x, f x = x) ∨ (∀ x, f x = -x) :=
@@ -343,7 +343,7 @@ begin
   sorry
 end
 
-theorem imosl_2009_number_theory_p4
+theorem fimo_2009_number_theory_p4
   (n : ℕ)
   (h₀ : 0 < n)
   (a : ℕ → ℕ)
@@ -353,7 +353,7 @@ begin
   sorry
 end
 
-theorem imosl_2009_number_theory_p6
+theorem fimo_2009_number_theory_p6
   (k : ℕ)
   (h₀ : 0 < k)
   (a : ℕ → ℤ)
@@ -363,7 +363,7 @@ begin
   sorry
 end
 
-theorem imosl_2009_number_theory_p7
+theorem fimo_2009_number_theory_p7
   (a b : ℕ)
   (h₀ : 1 < a ∧ a ≠ b)
   (h₁ : 1 < b) :
@@ -372,7 +372,7 @@ begin
   sorry
 end
 
-theorem imosl_2010_algebra_p1
+theorem fimo_2010_algebra_p1
   (f : ℝ → ℝ)
   (h₀ : ∀ x y, f (floor x * y) = f x * floor (f y)) :
   (∃ C : ℝ, (C = 0 ∨ (1 ≤ C ∧ C < 2)) ∧ ∀ x, f x = C) :=
@@ -380,7 +380,7 @@ begin
   sorry
 end
 
-theorem imosl_2010_algebra_p2
+theorem fimo_2010_algebra_p2
   (a b c d : ℝ)
   (h₀ : a + b + c + d = 6)
   (h₁ : a^2 + b^2 + c^2 + d^2 = 12) :
@@ -390,7 +390,7 @@ begin
   sorry
 end
 
-theorem imosl_2010_algebra_p3
+theorem fimo_2010_algebra_p3
   (x : ℕ → ℝ)
   (s : ℝ)
   (h₀ : ∀ i, 0 ≤ x i)
@@ -401,7 +401,7 @@ begin
   sorry
 end
 
-theorem imosl_2010_algebra_p4
+theorem fimo_2010_algebra_p4
   (x : ℕ → ℤ)
   (h₀ : x 1 = 1)
   (h₁ : ∀ k, k ≥ 1 → x (2 * k) = -x k)
@@ -411,7 +411,7 @@ begin
   sorry
 end
 
-theorem imosl_2010_algebra_p5
+theorem fimo_2010_algebra_p5
   (f : ℚ → ℚ)
   (h₀ : ∀ x y : ℚ, 0 < x ∧ 0 < y → f (f x^2 * y) = x^3 * f (x * y))
   (h₁ : ∀ x : ℚ, 0 < x → 0 < f x) :
@@ -420,7 +420,7 @@ begin
   sorry
 end
 
-theorem imosl_2010_algebra_p6
+theorem fimo_2010_algebra_p6
   (f g : ℕ+ → ℕ+)
   (h₁ : ∀ n, f (g n) = f n + 1)
   (h₂ : ∀ n, g (f n) = g n + 1) :
@@ -429,7 +429,7 @@ begin
   sorry
 end
 
-theorem imosl_2010_algebra_p8
+theorem fimo_2010_algebra_p8
   (a b c d e f s t : ℝ)
   (h₀ : 0 < a ∧ a < b ∧ b < c ∧ c < d ∧ d < e ∧ e < f)
   (h₁ : s = a + c + e)
@@ -440,7 +440,7 @@ begin
 end
 
 
-theorem imosl_2010_number_theory_p1_1
+theorem fimo_2010_number_theory_p1_1
   (n : ℕ)
   (s : finset ℕ)
   (h₀ : n = finset.card s)
@@ -451,7 +451,7 @@ begin
   sorry
 end
 
-theorem imosl_2010_number_theory_p1_2
+theorem fimo_2010_number_theory_p1_2
   (n : ℕ)
   (s : finset ℕ)
   (h₀ : n = finset.card s)
@@ -462,7 +462,7 @@ begin
   sorry
 end
 
-theorem imosl_2010_number_theory_p2
+theorem fimo_2010_number_theory_p2
   (m n : ℕ)
   (h₀ : m^2 + 2 * 3^n = m * (2^(n+1) - 1)) :
   (m, n) = (6, 3) ∨ (m, n) = (9, 3) ∨ (m, n) = (9, 5) ∨ (m, n) = (54, 5) :=
@@ -470,7 +470,7 @@ begin
   sorry
 end
 
-theorem imosl_2010_number_theory_p5
+theorem fimo_2010_number_theory_p5
   (f : ℕ → ℕ)
   (h₀ : ∀ m n : ℕ, 0 < m → 0 < n → is_square ((f m + n) * (m + f n))) :
   ∃ c : ℕ, ∀ n : ℕ, f n = n + c :=
@@ -478,7 +478,7 @@ begin
   sorry
 end
 
-theorem imosl_2011_algebra_p2
+theorem fimo_2011_algebra_p2
   (x : ℕ → ℕ)
   (a : ℕ)
   (h₀ : ∀ n, ∃ a, ∑ i in finset.range 2011, (i + 1) * x (i + 1)^n = a^(n + 1) + 1)
@@ -488,7 +488,7 @@ begin
   sorry
 end
 
-theorem imosl_2011_algebra_p3
+theorem fimo_2011_algebra_p3
   (f g : ℝ → ℝ)
   (h₀ : ∀ x y, g (f (x + y)) = f x + (2 * x + y) * g y) :
   (∀ x, f x = 0 ∧ g x = 0) ∨ (∃ C : ℝ, (∀ x, f x = x^2 + C) ∧ (∀ x, g x = x)) :=
@@ -496,7 +496,7 @@ begin
   sorry
 end
 
-theorem imosl_2011_algebra_p6
+theorem fimo_2011_algebra_p6
   (f : ℝ → ℝ)
   (h₀ : ∀ x y, f (x + y) ≤ y * f x + f (f x)) :
   ∀ x ≤ 0, f x = 0 :=
@@ -504,7 +504,7 @@ begin
   sorry
 end
 
-theorem imosl_2011_algebra_p7
+theorem fimo_2011_algebra_p7
   (a b c : ℝ)
   (h₀ : a > 0 ∧ b > 0 ∧ c > 0)
   (h₁ : min (a + b) (min (b + c) (c + a)) > sqrt 2)
@@ -514,7 +514,7 @@ begin
   sorry
 end
 
-theorem imosl_2011_number_theory_p3
+theorem fimo_2011_number_theory_p3
   (n : ℕ)
   (h₀ : n ≥ 1)
   (h₁ : odd n)
@@ -525,7 +525,7 @@ begin
   sorry
 end
 
-theorem imosl_2011_number_theory_p5
+theorem fimo_2011_number_theory_p5
   (f : ℤ → ℤ)
   (h₀ : ∀ m n : ℤ, (f(m) - f(n)) % f(m - n) = 0)
   (h₁ : ∀ x : ℤ, 0 < f(x)) :
@@ -534,7 +534,7 @@ begin
   sorry
 end
 
-theorem imosl_2011_number_theory_p7
+theorem fimo_2011_number_theory_p7
   (p m n : ℕ)
   (k : ℕ)
   (h₀ : nat.prime p)
@@ -545,7 +545,7 @@ begin
   sorry
 end
 
-theorem imosl_2012_algebra_p1
+theorem fimo_2012_algebra_p1
   (f : ℤ → ℤ)
   (h₀ : ∀ a b c, a + b + c = 0 → f a ^ 2 + f b ^ 2 + f c ^ 2 = 2 * f a * f b + 2 * f b * f c + 2 * f c * f a) :
   (∃ k : ℤ, k ≠ 0 ∧
@@ -557,7 +557,7 @@ begin
   sorry
 end
 
-theorem imosl_2012_algebra_p3
+theorem fimo_2012_algebra_p3
   (n : ℕ)
   (a : fin (n - 1) → ℝ)
   (h₀ : n ≥ 3)
@@ -568,7 +568,7 @@ begin
   sorry
 end
 
-theorem imosl_2012_algebra_p5
+theorem fimo_2012_algebra_p5
   (f : ℝ → ℝ)
   (h₀ : ∀ x y, f (1 + x * y) - f (x + y) = f x * f y)
   (h₁ : f (-1) ≠ 0) :
@@ -577,7 +577,7 @@ begin
   sorry
 end
 
-theorem imosl_2012_algebra_p6
+theorem fimo_2012_algebra_p6
   (f : ℕ → ℕ)
   (h₀ : ∀ n, ∃ k, (f^[2 * k]) n = n + k)
   (k_n : ℕ → ℕ)
@@ -587,7 +587,7 @@ begin
   sorry
 end
 
-theorem imosl_2012_number_theory_p1
+theorem fimo_2012_number_theory_p1
   (m n : ℤ)
   (h₀ : m ≠ 0 ∧ n ≠ 0)
   (h₁ : ∀ (A : set ℤ), (m ∈ A ∧ n ∈ A ∧ ∀ (x y : ℤ), x ∈ A → y ∈ A → ∀ (k : ℤ), x^2 + k * x * y + y^2 ∈ A) → A = set.univ) :
@@ -596,7 +596,7 @@ begin
   sorry
 end
 
-theorem imosl_2012_number_theory_p2
+theorem fimo_2012_number_theory_p2
   (x y z : ℕ)
   (h₀ : 0 < x ∧ 0 < y ∧ 0 < z)
   (h₁ : x ≤ y ∧ y ≤ z)
@@ -606,7 +606,7 @@ begin
   sorry
 end
 
-theorem imosl_2012_number_theory_p3
+theorem fimo_2012_number_theory_p3
   (m : ℕ)
   (h₀ : 2 ≤ m)
   (h₁ : ∀ n, m / 3 ≤ n → n ≤ m / 2 → n ∣ nat.choose n (m - 2 * n)) :
@@ -615,7 +615,7 @@ begin
   sorry
 end
 
-theorem imosl_2012_number_theory_p4_1 :
+theorem fimo_2012_number_theory_p4_1 :
   let friendly (a : ℕ) : Prop :=
     ∃ m n : ℕ, 0 < m ∧ 0 < n ∧ (m^2 + n) * (n^2 + m) = a * (m - n)^3 in
   finset.card {a ∈ finset.Icc 1 2012 | friendly a} ≥ 500 :=
@@ -623,13 +623,13 @@ begin
   sorry
 end
 
-theorem imosl_2012_number_theory_p4_2 :
+theorem fimo_2012_number_theory_p4_2 :
   ¬(∃ (m n : ℕ), 0 < m ∧ 0 < n ∧ (m^2 + n) * (n^2 + m) = 2 * (m - n)^3) :=
 begin
   sorry
 end
 
-theorem imosl_2012_number_theory_p6
+theorem fimo_2012_number_theory_p6
   (x y : ℕ)
   (n : ℕ)
   (h₀ : 0 < x)
@@ -640,7 +640,7 @@ begin
   sorry
 end
 
-theorem imosl_2012_number_theory_p7
+theorem fimo_2012_number_theory_p7
   (n : ℕ)
   (a : finset ℕ)
   (h₀ : finset.card a = n)
@@ -651,7 +651,7 @@ begin
   sorry
 end
 
-theorem imosl_2012_number_theory_p8
+theorem fimo_2012_number_theory_p8
   (p r a b : ℤ)
   (h₀ : prime p)
   (h₁ : p > 100) :
@@ -660,7 +660,7 @@ begin
   sorry
 end
 
-theorem imosl_2013_algebra_p1
+theorem fimo_2013_algebra_p1
   (n : ℕ)
   (a : ℕ → ℝ)
   (u v : ℕ → ℝ)
@@ -672,7 +672,7 @@ begin
   sorry
 end
 
-theorem imosl_2013_algebra_p2
+theorem fimo_2013_algebra_p2
   (s : finset ℝ)
   (h₀ : s.card = 2000) :
   ∃ a b c d ∈ s, a ≠ c ∨ b ≠ d ∧ a > b ∧ c > d ∧ abs (((a - b) / (c - d) - 1) : ℝ) < 1 / 100000 :=
@@ -680,7 +680,7 @@ begin
   sorry
 end
 
-theorem imosl_2013_algebra_p3
+theorem fimo_2013_algebra_p3
   (f : ℚ → ℝ)
   (a : ℚ)
   (h₀ : a > 1)
@@ -692,7 +692,7 @@ begin
   sorry
 end
 
-theorem imosl_2013_algebra_p4
+theorem fimo_2013_algebra_p4
   (n : ℕ)
   (a : ℕ → ℕ)
   (h₀ : n > 0)
@@ -706,7 +706,7 @@ begin
   sorry
 end
 
-theorem imosl_2013_algebra_p5
+theorem fimo_2013_algebra_p5
   (f : ℕ → ℕ)
   (h₀ : ∀ n, f (f (f n)) = f (n + 1) + 1) :
   (∀ n, f n = n + 1) ∨
@@ -717,7 +717,7 @@ begin
   sorry
 end
 
-theorem imosl_2013_algebra_p6
+theorem fimo_2013_algebra_p6
   (m : ℤ)
   (h₀ : m ≠ 0)
   (P : polynomial ℝ)
@@ -727,7 +727,7 @@ begin
   sorry
 end
 
-theorem imosl_2013_number_theory_p1
+theorem fimo_2013_number_theory_p1
   (f : ℕ+ → ℕ+)
   (h₀ : ∀ (m n : ℕ+), (m^2 + f n) ∣ (m * f m + n)) :
   f = (λ n, n) :=
@@ -735,14 +735,14 @@ begin
   sorry
 end
 
-theorem imosl_2013_number_theory_p2
+theorem fimo_2013_number_theory_p2
   (k n : ℕ+):
   ∃ (m : ℕ → ℕ+), (∏ i in finset.range k.val, (1 + 1 / (m i:ℝ))) = 1 + (2^k.val - 1) / n :=
 begin
   sorry
 end
 
-theorem imosl_2013_number_theory_p6
+theorem fimo_2013_number_theory_p6
   (f : ℚ → ℤ)
   (h₀ : ∀ (x : ℚ) (a : ℤ) (b : ℕ), 0 < b → f ((f x + a) / b) = f ((x + a) / b)) :
   (∃ c : ℤ, ∀ x : ℚ, f x = c) ∨
@@ -752,7 +752,7 @@ begin
   sorry
 end
 
-theorem imosl_2014_algebra_p1
+theorem fimo_2014_algebra_p1
   (z : ℕ → ℕ)
   (h₀ : ∀ n, z n < z (n + 1))
   (h₁ : ∀ n, 0 < z n) :
@@ -761,7 +761,7 @@ begin
   sorry
 end
 
-theorem imosl_2014_algebra_p2
+theorem fimo_2014_algebra_p2
   (f : ℝ → ℝ)
   (a b : ℝ)
   (a_n b_n : ℕ → ℝ)
@@ -777,7 +777,7 @@ begin
   sorry
 end
 
-theorem imosl_2014_algebra_p4
+theorem fimo_2014_algebra_p4
   (f : ℤ → ℤ)
   (h₀ : ∀ m n, f (f m + n) + f m = f n + f (3 * m) + 2014) :
   f = (λ n, 2 * n + 1007) :=
@@ -785,7 +785,7 @@ begin
   sorry
 end
 
-theorem imosl_2014_algebra_p5
+theorem fimo_2014_algebra_p5
   (P : polynomial ℝ)
   (h₀ : ∀ x y, (abs (y^2 - (P.eval x)) ≤ 2 * abs x) ↔ (abs (x^2 - (P.eval y)) ≤ 2 * abs y)) :
   P.eval 0 ∈ set.Iio (0:ℝ) ∪ {1} :=
@@ -793,7 +793,7 @@ begin
   sorry
 end
 
-theorem imosl_2014_algebra_p6
+theorem fimo_2014_algebra_p6
   (f : ℤ → ℤ)
   (h₀ : ∀ n, n^2 + 4 * f n = (f (f n))^2) :
   (∀ n, f n = n + 1) ∨
@@ -803,7 +803,7 @@ begin
   sorry
 end
 
-theorem imosl_2014_number_theory_p1
+theorem fimo_2014_number_theory_p1
   (n : ℕ)
   (h₀ : n ≥ 2)
   (A_n : finset ℕ := finset.image (λ k, 2^n - 2^k) (finset.range n))
@@ -814,7 +814,7 @@ begin
   sorry
 end
 
-theorem imosl_2014_number_theory_p5
+theorem fimo_2014_number_theory_p5
   (p x y : ℕ)
   (h₀ : nat.prime p)
   (h₁ : ∃ k : ℕ, x^(p-1) + y = p^k)
@@ -825,7 +825,7 @@ begin
   sorry
 end
 
-theorem imosl_2014_number_theory_p7
+theorem fimo_2014_number_theory_p7
   (c n : ℕ)
   (a : ℕ → ℕ)
   (h₀ : c ≥ 1)
@@ -836,7 +836,7 @@ begin
   sorry
 end
 
-theorem imosl_2015_algebra_p1
+theorem fimo_2015_algebra_p1
   (a : ℕ → ℝ)
   (h₀ : ∀ k, 0 < a k)
   (h₁ : ∀ k, a (k + 1) ≥ k * a k / (a k^2 + (k - 1)))
@@ -847,7 +847,7 @@ begin
   sorry
 end
 
-theorem imosl_2015_algebra_p2
+theorem fimo_2015_algebra_p2
   (f : ℤ → ℤ)
   (h₀ : ∀ x y, f (x - f y) = f (f x) - f y - 1) :
   (∀ x, f x = -1) ∨ (∀ x, f x = x + 1) :=
@@ -855,7 +855,7 @@ begin
   sorry
 end
 
-theorem imosl_2015_algebra_p4
+theorem fimo_2015_algebra_p4
   (f : ℝ → ℝ)
   (h₀ : ∀ x y, f (x + f (x + y)) + f (x * y) = x + f (x + y) + y * f x) :
   (∀ x, f x = x) ∨ (∀ x, f x = 2 - x) :=
@@ -863,7 +863,7 @@ begin
   sorry
 end
 
-theorem imosl_2015_algebra_p5
+theorem fimo_2015_algebra_p5
   (f : ℤ → ℤ)
   (h₀ : ∀ x, odd (f x))
   (h₁ : ∀ x y, f (x + f x + y) + f (x - f x - y) = f (x + y) + f (x - y)) :
@@ -875,7 +875,7 @@ begin
   sorry
 end
 
-theorem imosl_2015_number_theory_p2
+theorem fimo_2015_number_theory_p2
   (a b k : ℕ)
   (h₀ : 0 < a)
   (h₁ : 0 < b)
@@ -885,7 +885,7 @@ begin
   sorry
 end
 
-theorem imosl_2015_number_theory_p4 :
+theorem fimo_2015_number_theory_p4 :
   ∀ (a b : ℕ → ℕ),
   (a 0 ≥ 2 ∧ b 0 ≥ 2) →
   (∀ n, a (n + 1) = gcd (a n) (b n) + 1 ∧ b (n + 1) = lcm (a n) (b n) - 1) →
@@ -894,7 +894,7 @@ begin
   sorry
 end
 
-theorem imosl_2015_number_theory_p5
+theorem fimo_2015_number_theory_p5
   (a b c : ℕ)
   (h₀ : 0 < a ∧ 0 < b ∧ 0 < c)
   (h₁ : ∃ n : ℕ, a * b - c = 2^n)
@@ -905,7 +905,7 @@ begin
   sorry
 end
 
-theorem imosl_2016_algebra_p1
+theorem fimo_2016_algebra_p1
   (a b c : ℝ)
   (h₀ : 0 < a ∧ 0 < b ∧ 0 < c)
   (h₁ : min (a * b) (min (b * c) (c * a)) ≥ 1) :
@@ -914,7 +914,7 @@ begin
   sorry
 end
 
-theorem imosl_2016_algebra_p2
+theorem fimo_2016_algebra_p2
   (C : ℝ)
   (a : fin 5 → ℝ)
   (h₀ : ∀ i j k l, i ≠ j ∧ i ≠ k ∧ i ≠ l ∧ j ≠ k ∧ j ≠ l ∧ k ≠ l → abs (a i / a j - a k / a l) ≤ C)
@@ -924,7 +924,7 @@ begin
   sorry
 end
 
-theorem imosl_2016_algebra_p3
+theorem fimo_2016_algebra_p3
   (n : ℕ)
   (a b x : fin n → ℝ)
   (h₀ : n ≥ 3)
@@ -936,7 +936,7 @@ begin
   sorry
 end
 
-theorem imosl_2016_algebra_p4
+theorem fimo_2016_algebra_p4
   (f : ℝ → ℝ)
   (h₀ : ∀ x y, 0 < x ∧ 0 < y → x * f (x^2) * f (f y) + f (y * f x) = f (x * y) * (f (f (x^2)) + f (f (y^2))))
   (h₁ : ∀ x, 0 < x → 0 < f x) :
@@ -945,7 +945,7 @@ begin
   sorry
 end
 
-theorem imosl_2016_algebra_p5_1
+theorem fimo_2016_algebra_p5_1
   (n : ℕ)
   (h₀ : 0 < n) :
   ∃ a b : ℕ, 0 < b ∧ b ≤ n.sqrt + 1 ∧ n.sqrt ≤ a / b ∧ a / b ≤ (n + 1).sqrt :=
@@ -953,13 +953,13 @@ begin
   sorry
 end
 
-theorem imosl_2016_algebra_p5_2 :
+theorem fimo_2016_algebra_p5_2 :
   ∀ N : ℕ, ∃ n : ℕ, n > N ∧ ∀ a b : ℤ, 0 < b ∧ b ≤ int.sqrt n → ¬(int.sqrt n ≤ a / b ∧ a / b ≤ int.sqrt (n + 1)) :=
 begin
   sorry
 end
 
-theorem imosl_2016_algebra_p7
+theorem fimo_2016_algebra_p7
   (f : ℝ → ℝ)
   (h₀ : f 0 ≠ 0)
   (h₁ : ∀ x y : ℝ, (f (x + y))^2 = 2 * f x * f y + max (f (x^2) + f (y^2)) (f (x^2 + y^2))) :
@@ -968,7 +968,7 @@ begin
   sorry
 end
 
-theorem imosl_2016_algebra_p8
+theorem fimo_2016_algebra_p8
   (n : ℕ)
   (x : ℕ → ℝ)
   (a : ℝ)
@@ -980,7 +980,7 @@ begin
   sorry
 end
 
-theorem imosl_2016_number_theory_p2
+theorem fimo_2016_number_theory_p2
   (n : ℕ)
   (h₀ : 0 < n)
   (f : ℕ → ℕ := λ n, finset.card (nat.divisors n))
@@ -990,7 +990,7 @@ begin
   sorry
 end
 
-theorem imosl_2016_number_theory_p3
+theorem fimo_2016_number_theory_p3
   (a b : ℕ)
   (h₀ : 0 < a ∧ 0 < b)
   (h₁ : ∀ x ∈ finset.Icc a (a + b), gcd (x^2 + x + 1) (finset.prod (finset.erase (finset.Icc a (a + b)) x) (λ y, y^2 + y + 1)) ≠ 1) :
@@ -999,7 +999,7 @@ begin
   sorry
 end
 
-theorem imosl_2016_number_theory_p4
+theorem fimo_2016_number_theory_p4
   (n m k l : ℕ)
   (h₀ : n ≠ 1)
   (h₁ : n^k + m * n^l + 1 ∣ n^(k + l) - 1)
@@ -1009,7 +1009,7 @@ begin
   sorry
 end
 
-theorem imosl_2016_number_theory_p5
+theorem fimo_2016_number_theory_p5
   (a : ℕ)
   (h₀ : ¬(∃ n : ℕ, a = n^2))
   (A : set ℕ := {k | ∃ x y : ℕ, (x : ℤ) > int.sqrt a ∧ k = (x^2 - a) / (x^2 - y^2)})
@@ -1019,7 +1019,7 @@ begin
   sorry
 end
 
-theorem imosl_2016_number_theory_p6
+theorem fimo_2016_number_theory_p6
   (f : ℕ → ℕ)
   (h₀ : ∀ m n : ℕ, 0 < m → 0 < n → (f m + f n - m * n) ∣ (m * f m + n * f n) ∧ (f m + f n - m * n) ≠ 0) :
   ∀ n : ℕ, 0 < n → f n = n^2 :=
@@ -1027,7 +1027,7 @@ begin
   sorry
 end
 
-theorem imosl_2017_algebra_p1
+theorem fimo_2017_algebra_p1
   (a : ℕ → ℕ)
   (n k M : ℕ)
   (h₀ : (∀ i, 0 < a i) ∧ 0 < k ∧ 0 < M)
@@ -1041,7 +1041,7 @@ begin
   sorry
 end
 
-theorem imosl_2017_algebra_p2
+theorem fimo_2017_algebra_p2
   (q : ℝ)
   (napkin : finset ℝ)
   (h₀ : napkin.card = 10)
@@ -1057,7 +1057,7 @@ begin
   sorry
 end
 
-theorem imosl_2017_algebra_p3
+theorem fimo_2017_algebra_p3
   {S : Type}
   [fintype S]
   (f : S → S)
@@ -1071,7 +1071,7 @@ begin
   sorry
 end
 
-theorem imosl_2017_algebra_p6
+theorem fimo_2017_algebra_p6
   (f : ℝ → ℝ)
   (h₀ : ∀ x y, f (f x * f y) + f (x + y) = f (x * y)) :
   (∀ x, f x = 0) ∨ (∀ x, f x = x - 1) ∨ (∀ x, f x = 1 - x) :=
@@ -1079,7 +1079,7 @@ begin
   sorry
 end
 
-theorem imosl_2017_algebra_p7
+theorem fimo_2017_algebra_p7
   (a b : ℕ → ℤ)
   (h₀ : a 0 = 0)
   (h₁ : a 1 = 1)
@@ -1090,7 +1090,7 @@ begin
   sorry
 end
 
-theorem imosl_2017_algebra_p8
+theorem fimo_2017_algebra_p8
   (f : ℝ → ℝ)
   (h₀ : ∀ x y, (f x + y) * (f y + x) > 0 → f x + y = f y + x) :
   ∀ x y, x > y → f x + y ≤ f y + x :=
@@ -1098,7 +1098,7 @@ begin
   sorry
 end
 
-theorem imosl_2017_number_theory_p3
+theorem fimo_2017_number_theory_p3
   (n : ℕ)
   (h₀ : 2 ≤ n)
   (h₁ : ∀ (a : ℕ → ℤ), (∑ k in finset.range n, a k) % (n : ℤ) ≠ 0 →
@@ -1109,7 +1109,7 @@ begin
   sorry
 end
 
-theorem imosl_2017_number_theory_p8
+theorem fimo_2017_number_theory_p8
   (p : ℕ)
   (h₀ : nat.prime p)
   (h₁ : p % 2 = 1)
@@ -1123,7 +1123,7 @@ begin
   sorry
 end
 
-theorem imosl_2018_algebra_p1
+theorem fimo_2018_algebra_p1
   (f : ℚ → ℚ)
   (h₀ : ∀ x y, 0 < x → 0 < y → f (x^2 * (f y)^2) = f x^2 * f y)
   (h₁ : ∀ x, 0 < x → 0 < f x) :
@@ -1132,7 +1132,7 @@ begin
   sorry
 end
 
-theorem imosl_2018_algebra_p2
+theorem fimo_2018_algebra_p2
   (n : ℕ)
   (a : ℕ → ℝ)
   (h₀ : n ≥ 3)
@@ -1144,7 +1144,7 @@ begin
   sorry
 end
 
-theorem imosl_2018_algebra_p3
+theorem fimo_2018_algebra_p3
   (S : set ℕ)
   (h₀ : ∀ x ∈ S, 0 < x) :
   (∃ (F G : finset ℕ), (∀ x ∈ F, x ∈ S) ∧ (∀ x ∈ G, x ∈ S) ∧ F ≠ G ∧ (∑ x in F, (↑x : ℚ)⁻¹) = (∑ x in G, (↑x : ℚ)⁻¹)) ∨
@@ -1153,7 +1153,7 @@ begin
   sorry
 end
 
-theorem imosl_2018_algebra_p4
+theorem fimo_2018_algebra_p4
   (a : ℕ → ℝ)
   (h₀ : a 0 = 0)
   (h₁ : a 1 = 1)
@@ -1163,7 +1163,7 @@ begin
   sorry
 end
 
-theorem imosl_2018_algebra_p5
+theorem fimo_2018_algebra_p5
   (f : ℝ → ℝ)
   (h₀ : ∀ x y, 0 < x ∧ 0 < y → (x + 1 / x) * f y = f (x * y) + f (y / x)) :
   ∃ (c₁ c₂ : ℝ), ∀ x, 0 < x → f x = c₁ * x + c₂ / x :=
@@ -1171,7 +1171,7 @@ begin
   sorry
 end
 
-theorem imosl_2018_algebra_p7
+theorem fimo_2018_algebra_p7
   (a b c d s : ℝ)
   (h₀ : 0 ≤ a ∧ 0 ≤ b ∧ 0 ≤ c ∧ 0 ≤ d)
   (h₁ : a + b + c + d = 100)
@@ -1181,7 +1181,7 @@ begin
   sorry
 end
 
-theorem imosl_2018_number_theory_p1
+theorem fimo_2018_number_theory_p1
   (n k : ℕ)
   (h₀ : 0 < n ∧ 0 < k)
   (h₁ : n ≠ k)
@@ -1191,7 +1191,7 @@ begin
   sorry
 end
 
-theorem imosl_2018_number_theory_p2
+theorem fimo_2018_number_theory_p2
   (n : ℕ)
   (h₀ : n > 1)
   (table : matrix (fin n) (fin n) ℕ)
@@ -1203,7 +1203,7 @@ begin
   sorry
 end
 
-theorem imosl_2018_number_theory_p5
+theorem fimo_2018_number_theory_p5
   (x y z t : ℕ+)
   (h₀ : x * y - z * t = x + y)
   (h₁ : x + y = z + t) :
@@ -1212,7 +1212,7 @@ begin
   sorry
 end
 
-theorem imosl_2018_number_theory_p6
+theorem fimo_2018_number_theory_p6
   (f : ℕ → ℕ)
   (h₀ : ∀ m n, 1 < m → 1 < n → f (m + n) ∣ f m + f n)
   (h₁ : ∀ x, 1 < x → 2 ≤ f x) :
@@ -1221,7 +1221,7 @@ begin
   sorry
 end
 
-theorem imosl_2019_algebra_p1
+theorem fimo_2019_algebra_p1
   (f : ℤ → ℤ)
   (h₀ : ∀ a b, f (2 * a) + 2 * f b = f (f (a + b))) :
   (∀ n, f n = 0) ∨ (∃ K : ℤ, ∀ n, f n = 2 * n + K) :=
@@ -1229,7 +1229,7 @@ begin
   sorry
 end
 
-theorem imosl_2019_algebra_p2
+theorem fimo_2019_algebra_p2
   (u : ℕ → ℝ)
   (a b : ℝ)
   (h₀ : ∑ i in finset.range 2019, u i = 0)
@@ -1241,7 +1241,7 @@ begin
   sorry
 end
 
-theorem imosl_2019_algebra_p5
+theorem fimo_2019_algebra_p5
   (n : ℕ)
   (x : fin n → ℝ)
   (h₀ : n > 1)
@@ -1251,14 +1251,14 @@ begin
   sorry
 end
 
-theorem imosl_2019_algebra_p7_1 :
+theorem fimo_2019_algebra_p7_1 :
   ∃ (f : ℤ → ℤ), (∀ x y : ℤ, f (f (x + y) + y) = f (f x + y)) ∧
   ∃ (v : ℤ), (∃ (X_v : finset ℤ), (∀ x : ℤ, f x = v ↔ x ∈ X_v) ∧ X_v.nonempty) :=
 begin
   sorry
 end
 
-theorem imosl_2019_number_theory_p1
+theorem fimo_2019_number_theory_p1
   (m n : ℕ)
   (h₀ : 0 < m ∧ 0 < n)
   (h₁ : (∏ k in finset.range n, (2^n - 2^k)) = nat.factorial m) :
@@ -1267,7 +1267,7 @@ begin
   sorry
 end
 
-theorem imosl_2019_number_theory_p2
+theorem fimo_2019_number_theory_p2
   (a b c : ℕ+)
   (h₀ : a^3 + b^3 + c^3 = (a * b * c)^2) :
   (a, b, c) = (1, 2, 3) ∨ (a, b, c) = (1, 3, 2) ∨ (a, b, c) = (2, 1, 3) ∨ (a, b, c) = (2, 3, 1) ∨ (a, b, c) = (3, 1, 2) ∨ (a, b, c) = (3, 2, 1) :=
@@ -1275,7 +1275,7 @@ begin
   sorry
 end
 
-theorem imosl_2019_number_theory_p4
+theorem fimo_2019_number_theory_p4
   (C : ℕ)
   (h₀ : 0 < C)
   (f : ℕ → ℕ)
@@ -1285,7 +1285,7 @@ begin
   sorry
 end
 
-theorem imosl_2019_number_theory_p5
+theorem fimo_2019_number_theory_p5
   (a b : ℕ)
   (h₀ : 0 < a)
   (h₁ : ∀ n, a * n ≥ b → ((nat.choose (a * n) b) - 1) % (a * n + 1) = 0)
@@ -1295,7 +1295,7 @@ begin
   sorry
 end
 
-theorem imosl_2019_number_theory_p8
+theorem fimo_2019_number_theory_p8
   (a b : ℕ)
   (h₀ : 0 < a ∧ 0 < b) :
   ¬(∃ k : ℕ, (k^2 : ℝ) = a^2 + ⌈((4 * a^2) : ℝ) / (b : ℝ)⌉) :=
@@ -1303,7 +1303,7 @@ begin
   sorry
 end
 
-theorem imosl_2020_algebra_p1_2
+theorem fimo_2020_algebra_p1_2
   (N : ℕ)
   (h₀ : N > 0)
   (b_N : ℝ)
@@ -1313,7 +1313,7 @@ begin
   sorry
 end
 
-theorem imosl_2020_algebra_p3
+theorem fimo_2020_algebra_p3
   (a b c d s : ℝ)
   (h₀ : 0 < a ∧ 0 < b ∧ 0 < c ∧ 0 < d)
   (h₁ : (a + c) * (b + d) = a * c + b * d)
@@ -1323,7 +1323,7 @@ begin
   sorry
 end
 
-theorem imosl_2020_algebra_p4
+theorem fimo_2020_algebra_p4
   (a b c d : ℝ)
   (h₀ : 0 < a ∧ 0 < b ∧ 0 < c ∧ 0 < d)
   (h₁ : a ≥ b ∧ b ≥ c ∧ c ≥ d)
@@ -1333,7 +1333,7 @@ begin
   sorry
 end
 
-theorem imosl_2020_algebra_p6
+theorem fimo_2020_algebra_p6
   (f : ℤ → ℤ)
   (h₀ : ∀ a b : ℤ, ∀ c : ℕ, (c : ℤ) = a^2 + b^2 → (f^[c]) (a + b) = a * f a + b * f b) :
   (∀ x : ℤ, f x = 0) ∨ (∀ x : ℤ, f x = x + 1) :=
@@ -1341,7 +1341,7 @@ begin
   sorry
 end
 
-theorem imosl_2020_algebra_p7
+theorem fimo_2020_algebra_p7
   (n k : ℕ)
   (a : ℕ → ℝ)
   (h₀ : ∀ i, 1 ≤ a i ∧ a i ≤ 2^k) :
@@ -1350,7 +1350,7 @@ begin
   sorry
 end
 
-theorem imosl_2020_algebra_p8
+theorem fimo_2020_algebra_p8
   (f : ℝ → ℝ)
   (h₀ : ∀ x y, 0 < x ∧ 0 < y → f (x + f (x * y)) + y = f x * f y + 1) :
   (∀ x, 0 < x → ∀ x, f x = x + 1) :=
@@ -1358,7 +1358,7 @@ begin
   sorry
 end
 
-theorem imosl_2020_number_theory_p7
+theorem fimo_2020_number_theory_p7
   (S : finset ℕ+)
   (n : ℕ)
   (h₀ : finset.card S = n)
@@ -1373,7 +1373,7 @@ begin
   sorry
 end
 
-theorem imosl_2021_algebra_p1
+theorem fimo_2021_algebra_p1
   (n : ℕ)
   (A : finset ℕ)
   (h₀ : A ⊆ finset.range (5^n + 1))
@@ -1383,7 +1383,7 @@ begin
   sorry
 end
 
-theorem imosl_2021_algebra_p4
+theorem fimo_2021_algebra_p4
   (n : ℕ)
   (x : fin n → ℝ)
   (h₀ : 0 < n) :
@@ -1393,7 +1393,7 @@ begin
   sorry
 end
 
-theorem imosl_2021_algebra_p5
+theorem fimo_2021_algebra_p5
   (n : ℕ)
   (a : ℕ → ℝ)
   (h₀ : n ≥ 2)
@@ -1404,7 +1404,7 @@ begin
   sorry
 end
 
-theorem imosl_2021_algebra_p6
+theorem fimo_2021_algebra_p6
   (A : finset ℤ)
   (m : ℕ)
   (B : ℕ → finset ℤ)
@@ -1415,7 +1415,7 @@ begin
   sorry
 end
 
-theorem imosl_2021_algebra_p7
+theorem fimo_2021_algebra_p7
   (n : ℕ)
   (x : ℕ → ℝ)
   (h₀ : n ≥ 1)
@@ -1426,7 +1426,7 @@ begin
   sorry
 end
 
-theorem imosl_2021_algebra_p8
+theorem fimo_2021_algebra_p8
   (f : ℝ → ℝ)
   (h₀ : ∀ a b c : ℝ, (f a - f b) * (f b - f c) * (f c - f a) = f (a * b^2 + b * c^2 + c * a^2) - f (a^2 * b + b^2 * c + c^2 * a)) :
   (∃ α₁ α₂ β₁ β₂ : ℝ, (∀ x, f x = α₁ * x + β₁) ∨ (∀ x, f x = α₂ * x^3 + β₂) ∧ (α₂ = -1 ∨ α₂ = 0 ∨ α₂ = 1)) :=
@@ -1434,7 +1434,7 @@ begin
   sorry
 end
 
-theorem imosl_2021_number_theory_p1
+theorem fimo_2021_number_theory_p1
   (n : ℕ)
   (h₀ : 1 ≤ n)
   (h₁ : ∃ (a b : ℕ), (0 < a ∧ 0 < b) ∧ (∀ p, ¬(prime p ∧ p^3 ∣ a^2 + b + 3)) ∧ (a * b + 3 * b + 8) / (a^2 + b + 3) = n) :
@@ -1443,7 +1443,7 @@ begin
   sorry
 end
 
-theorem imosl_2021_number_theory_p2
+theorem fimo_2021_number_theory_p2
   (n : ℕ)
   (h₀ : n ≥ 100)
   (cards : list ℕ)
@@ -1456,7 +1456,7 @@ begin
   sorry
 end
 
-theorem imosl_2021_number_theory_p7
+theorem fimo_2021_number_theory_p7
   (a : ℕ+ → ℕ+)
   (h₀ : ∀ n m, a (n + 2 * m) ∣ (a n + a (n + m))) :
   ∃ N d, ∀ n, n > N → a n = a (n + d) :=

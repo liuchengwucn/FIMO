@@ -1,0 +1,5 @@
+{
+    "problem_name": "fimo_2016_algebra_p5_2",
+    "informal_statement": "Prove that there are infinitely many positive integers $n$ such that there is no fraction $\\frac{a}{b}$ where $a$ and $b$ are integers satisfying $0<b \\leqslant \\sqrt{n}$ and $\\sqrt{n} \\leqslant \\frac{a}{b} \\leqslant \\sqrt{n+1}$.",
+    "informal_proof": "We show that for every positive integer $r$, there is no fraction $\\frac{a}{b}$ with $b \\leqslant \\sqrt{r^{2}+1}$ such that $\\sqrt{r^{2}+1} \\leqslant \\frac{a}{b} \\leqslant \\sqrt{r^{2}+2}$. Suppose on the contrary that such a fraction exists. Since $b \\leqslant \\sqrt{r^{2}+1}<r+1$ and $b$ is an integer, we have $b \\leqslant r$. Hence,\n\n$$\n(b r)^{2}<b^{2}\\left(r^{2}+1\\right) \\leqslant a^{2} \\leqslant b^{2}\\left(r^{2}+2\\right) \\leqslant b^{2} r^{2}+2 b r<(b r+1)^{2} .\n$$\n\nThis shows the square number $a^{2}$ is strictly bounded between the two consecutive squares $(b r)^{2}$ and $(b r+1)^{2}$, which is impossible. Hence, we have found infinitely many $n=r^{2}+1$ for which there is no fraction of the desired form."
+}

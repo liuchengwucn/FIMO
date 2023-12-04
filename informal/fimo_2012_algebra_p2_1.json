@@ -1,0 +1,5 @@
+{
+    "problem_name": "fimo_2012_algebra_p2_1",
+    "informal_statement": "Let $\\mathbb{Z}$ and $\\mathbb{Q}$ be the sets of integers and rationals respectively.\n\nDoes there exist a partition of $\\mathbb{Z}$ into three non-empty subsets $A, B, C$ such that the sets $A+B, B+C, C+A$ are disjoint?\n\nThe final answer is yes.",
+    "informal_proof": "The residue classes modulo 3 yield such a partition:\n\n$$\nA=\\{3 k \\mid k \\in \\mathbb{Z}\\}, \\quad B=\\{3 k+1 \\mid k \\in \\mathbb{Z}\\}, \\quad C=\\{3 k+2 \\mid k \\in \\mathbb{Z}\\} .\n$$"
+}
