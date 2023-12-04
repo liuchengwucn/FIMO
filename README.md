@@ -79,7 +79,7 @@ and (1) follows.
 * Formal Statement (Lean)
 
 ```
-theorem imosl_2006_algebra_p5
+theorem fimo_2006_algebra_p5
   (a b c : ℝ)
   (h₀ : a > 0 ∧ b > 0 ∧ c > 0)
   (h₁ : a + b > c ∧ a + c > b ∧ b + c > a) :
@@ -93,7 +93,7 @@ end
 
 ## Structure
 
-When organizing our project structure, we followed [openai/miniF2F](https://github.com/openai/miniF2F), hopefully making it easier for researchers to utilize our work.  Naming conventions are consistent with the miniF2F dataset. Each problem is nominated as `imosl_{year}_{category}_p{problem_count}`, where `imosl` denotes the IMO Shortlisted problems.
+When organizing our project structure, we followed [openai/miniF2F](https://github.com/openai/miniF2F), hopefully making it easier for researchers to utilize our work.  Naming conventions are consistent with the miniF2F dataset. Each problem is nominated as `fimo_{year}_{category}_p{problem_count}`, where `fimo` denotes the Formalized IMO-level problems.
 
 * `lean/fimo.lean`: Formalized IMO shortlist problems in LEAN language.
 * `prompts/algebra_prompts.txt`: Prompts for algebra problems.
