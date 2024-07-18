@@ -41,7 +41,7 @@ $$
 \frac{\sqrt{b+c-a}}{\sqrt{b}+\sqrt{c}-\sqrt{a}}+\frac{\sqrt{c+a-b}}{\sqrt{c}+\sqrt{a}-\sqrt{b}}+\frac{\sqrt{a+b-c}}{\sqrt{a}+\sqrt{b}-\sqrt{c}} \leq 3
 $$
 
-* Informal Provement
+* Informal Proof
 
 Note first that the denominators are all positive, e.g. $\sqrt{a}+\sqrt{b}>\sqrt{a+b}>\sqrt{c}$. Let $x=\sqrt{b}+\sqrt{c}-\sqrt{a}, y=\sqrt{c}+\sqrt{a}-\sqrt{b}$ and $z=\sqrt{a}+\sqrt{b}-\sqrt{c}$. Then
 
