@@ -1,5 +1,12 @@
 # FIMO
 
+> **Looking for FIMO in Lean 4?** Our ACL 2026 work
+> [**Discover and Prove**](https://github.com/liuchengwucn/discover-and-prove)
+> ports FIMO from Lean 3 to Lean 4 and adds a **Hard Mode** (answer hidden,
+> must be discovered before proving).
+> [Paper](https://aclanthology.org/2026.acl-long.3.pdf) ·
+> [Dataset](https://huggingface.co/datasets/liuchengwu/discover-and-prove)
+
 FIMO is a formal mathematics dataset comprising formal mathematical problem statements sourced from the International Mathematical Olympiad (IMO) Shortlisted Problems from 2006 to 2021. FIMO is currently tailored for the Lean formal language and is designed to facilitate advanced automated theorem proving at the IMO level. It comprises 149 formal problem statements, accompanied by both informal problem descriptions and their corresponding LATEX-based informal proofs. 
 
 The dataset aims to facilitate IMO-level AI mathematical reasoning research and provide a challenging benchmark to evaluate the reasoning ability of automated theorem systems. The dataset is currently targeting **Lean** formal system.
